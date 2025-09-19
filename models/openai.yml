@@ -1,0 +1,22 @@
+apiVersion: ark.mckinsey.com/v1alpha1
+kind: Model
+metadata:
+  name: default
+spec:
+  type: openai
+  model:
+    value: gpt-5-nano
+  config:
+    openai:
+      baseUrl:
+        value: "https://api.openai.com/v1"
+      apiKey:
+        valueFrom:
+          secretKeyRef:
+            name: openai-api-token
+            key: token
+      properties:
+        temperature:
+          value: "0.7"
+        max_tokens: 
+          value: "4096"

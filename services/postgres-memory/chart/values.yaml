@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/mckinsey/agents-at-scale-ark/postgres-memory
+  repository: postgres-memory
   pullPolicy: IfNotPresent
   # tag defaults to .Chart.AppVersion if not specified
 
